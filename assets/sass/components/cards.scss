@@ -1,0 +1,50 @@
+.card {
+ background-color: lighten($color-dark2,5%);
+ border-radius: 8px;
+ padding: 10px 20px;
+ text-align: right;
+ margin: 30px 0;
+ transition: .3s;
+ &__title{
+    font-size: 3rem;
+    font-weight: 500;
+    display: block;
+ }
+ &:focus{
+    background-color: lighten($color-dark2,10%);
+    transform: scale(1.01);
+    box-shadow: 0 5px 10px darken($color-dark2, 3%)  ;
+ }
+ .u-list{
+   //  list-style: none;
+   direction: rtl;
+    li {
+        position: relative;
+        margin-right: 10px;
+      //   &::after{
+      //       @include absolute ; 
+      //       content: '';
+      //       width: 10px;
+      //       height: 1px;
+      //       background-color: rgb(192, 192, 192);
+      //       right: -10px;
+      //       left: auto;
+      //       top:50%;
+      //   }
+    }
+ }
+}
+
+
+@media(max-width:650px){
+   .card{
+      p{
+         font-size: 1.4rem;
+      }
+      .u-list{
+         li {
+            font-size: 1.4rem;
+         }        
+      }
+   }
+}

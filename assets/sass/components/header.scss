@@ -1,0 +1,87 @@
+.header{
+    width: 100%;
+    height: 70vh;
+    margin-top: -6rem;
+    position: relative;
+    z-index: 0;
+    // clip-path: polygon(0 0 , 100% 0 , 100% 85% , 0% 100%);
+    overflow: hidden;
+    &__img{
+        width: 100%;
+        filter: brightness(40%) ;
+    }
+    &__button{
+        border: thin solid white;
+        background-color: transparent;
+        font-family: 'Tajawal';
+        font-weight: 500;
+        padding: 10px 20px;
+        color: $color-white;
+        margin: 30px 4px;
+        width: 14rem;
+        cursor: pointer;
+        transition: .3s;
+        &:hover{
+            background-color:$color-white;
+            color: black;
+        }
+        font-size: 1.6rem;
+        text-decoration: none;
+    }
+    &__content{
+         @include absolute ; 
+         z-index: 999;
+         color: white;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         h1 {
+             font-size:4rem;
+         }
+         span{
+             font-size: 1.5rem;
+            }
+        }
+    }
+    
+    
+    @media(max-width:450px){
+        .header{
+            // height: 60vh;
+        height: auto;
+
+            &__button{
+                padding: 3;
+                width: 11rem;
+            }
+        &__content{
+            h1{
+                font-size: 3rem;
+            }
+            span {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+  
+@media(max-width:850px){
+    
+    .header{
+     &__content{
+         h1{
+             margin-top: 50px;
+         }
+     }
+    }
+}
+
+
+@media(max-width:1300px){
+    
+    .header{
+        height: auto;
+    }
+}

@@ -1,0 +1,83 @@
+.sticky{
+    position:fixed !important ; 
+    top:0 ; 
+    left:0 ; 
+    right:0 ; 
+    background-color:$color-dark2 !important; 
+    box-shadow: 0 5px 10px rgba(black, $alpha: .1);
+     transform: translatey(-150%) ; 
+      transition: 0.3s ; 
+  }
+  body.scroll .nav.sticky{
+    transform: translatey(0%)
+ }
+ 
+.nav {
+    background-color: transparent;
+    color:$color-white;
+    font-size: $text-md;
+    display: flex;
+    height: 6rem;
+    z-index: 3;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    &__brand {
+        font-weight: 600;
+        text-decoration: none;
+        &--align {
+            padding: 10px 0px;
+            display: flex;
+            align-items: center;
+            color: white;
+            
+        }
+    }
+    &__img{   
+            width: 40px;
+            height: 40px;
+            padding-right: 5px;
+    }
+    &__cta{
+        a{
+            text-decoration: none;
+            color: $color-white;
+            padding: 3px 10px;
+            font-size: 2.2rem;
+            font-weight: 300;
+            border-bottom: solid thin transparent;
+            transition: .3s;
+            &:hover{
+            border-bottom: solid thin white;
+
+            }
+        }
+
+       
+    }
+}
+
+.products{
+    padding: 5px 10px;
+    margin-right: 10px;
+    font-size: 2.2rem;
+    font-weight: 500;
+    background-color: $color-gold;
+    border: none;
+    color: white;
+    font-family: 'Tajawal';
+    margin: 0 5px;
+    cursor: pointer;
+    transition: .3s;
+    &:hover{
+    background-color: lighten($color-gold, 10%);
+    }
+    &:active{
+        background-color: lighten($color-gold, 5%);
+        }
+}
+
+.menu{
+    height: 50%;
+    fill: white;
+}

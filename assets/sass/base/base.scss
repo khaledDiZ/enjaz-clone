@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+body , html {
+    font-size: 62.5%;
+    font-family: 'Tajawal' , sans-serif;
+    text-decoration: none !important;
+
+}
+
+body{
+    margin: 30px;
+    background-color: darken( $color-dark2 , 7%);
+}
+
+@media (max-width:850px){
+    .hide{
+        display: none !important;
+    }
+    
+
+    body{
+        margin: 1rem;
+        
+    }
+}
